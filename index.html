@@ -2,53 +2,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Rohan Siddharth | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <!-- HEADER SECTION -->
+    <!-- Header Navigation -->
     <header>
-        <h1>Welcome to My Portfolio</h1>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+        <nav class="navbar">
+            <div class="logo">Rohan Siddharth</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menu-toggle">☰</div>
         </nav>
     </header>
 
-    <!-- ABOUT SECTION -->
-    <section id="about">
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <p class="tags">student <span>|</span> tech enthusiast <span>|</span> creative thinker</p>
+            <h1>Hello, I'm <span class="highlight">Rohan.</span></h1>
+            <p class="subtext">Student at King's College | BSCS | Passionate about learning, building, and sharing ideas.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn primary">Get in Touch</a>
+                <a href="#about" class="btn secondary">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="profilephoto.jpg" alt="My Photo">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
         <h2>About Me</h2>
-        <p>Hello! I am a student passionate about learning web development. This is my final project using HTML & CSS only.</p>
-        <img src="https://via.placeholder.com/200" alt="My Photo">
+        <p>I'm a motivated student passionate about technology, fitness, and personal growth. I believe in continuous learning and applying creativity in everything I do.</p>
     </section>
 
-    <!-- PROJECTS SECTION -->
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>A simple website made with HTML and CSS.</p>
+    <!-- Hobbies Section -->
+    <section class="hobbies" id="hobbies">
+        <h2>My Hobbies</h2>
+        <div class="hobby-card">
+            <img src="books.webp" alt="Book">
+            <p>Reading Books</p>
         </div>
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>Another basic page layout without JavaScript.</p>
+        <div class="hobby-card">
+            <img src="gym.jpeg" alt="Gym">
+            <p>Going to the Gym</p>
         </div>
     </section>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Send me a Message</h2>
+        <form>
+            <div class="form-row">
+                <input type="text" placeholder="Name" required>
+                <input type="text" placeholder="Address" required>
+            </div>
+            <div class="form-row">
+                <input type="tel" placeholder="Phone Number" required>
+            </div>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
 
-    <!-- FOOTER -->
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 My Portfolio</p>
+        <a href="tel:+9779861110816">📞 Call</a>
+        <a href="https://instagram.com/" target="_blank">📷 Instagram</a>
     </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 
 </body>
 </html>
+
+
+
